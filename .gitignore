@@ -1,0 +1,22 @@
+# build
+build/
+cmake-build-*/
+out/
+bin/
+*.o
+*.obj
+*.exe
+
+# 存档
+highscore.dat
+
+# IDE
+.vs/
+.idea/
+.vscode/
+*.user
+CMakeUserPresets.json
+
+# 系统
+.DS_Store
+Thumbs.db
