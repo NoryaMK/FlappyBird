@@ -61,7 +61,8 @@ target_include_directories(flappybird PRIVATE ${CMAKE_SOURCE_DIR}/include)
 target_link_libraries(flappybird PRIVATE sfml-graphics sfml-window sfml-system)
 
 if(MSVC)
-    target_compile_options(flappybird PRIVATE /W4)
+    # 源码为 UTF-8（含中文注释），中文 Windows 下 MSVC 默认按 GBK 读取会解析出错
+    target_compile_options(flappybird PRIVATE /W4 /utf-8)
 else()
     target_compile_options(flappybird PRIVATE -Wall -Wextra -Wpedantic)
 endif()

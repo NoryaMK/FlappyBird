@@ -7,7 +7,7 @@
 #include <algorithm>
 
 namespace flappy {
-
+    
 Game::Game()
     : window_(sf::VideoMode(config::WindowWidth, config::WindowHeight),
               config::WindowTitle,
